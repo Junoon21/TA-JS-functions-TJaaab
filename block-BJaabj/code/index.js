@@ -76,6 +76,13 @@ function isLeapYear() {
   var year=+prompt("enter a yaer");
   if(year%4===0)
   {
+    else if(year%100===0)
+    {
+   else if(year%400===0)
+      {
+        alert("its a leap year");
+      }
+    }
     alert("leap year");
   }
   else {
@@ -93,10 +100,11 @@ isLeapYear();
 function getFactorial()
 {
   var number=+prompt("Enter a number");
-  for (let i=1;i<number;i++)
+  let final=1;
+  for (let i=number;number>1;i--)
   {
-    var ans=ans+((number-i)*i);
+    final *= i;
   }
-  alert(`the factorial of ${number} is ${ans}`)
+  alert(`the factorial of ${number} is ${final}`)
 }
 getFactorial();
