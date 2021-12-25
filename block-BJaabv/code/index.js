@@ -8,13 +8,13 @@
   * [ ] Add an additional argument to the function that takes the conversion rate of human to dog years.
 */
 
-function calculateDogAge(age,_huage) {
+function calculateDogAge(age,_conversionrate=7) {
   // Your code goes here
   let pupage=age*7;
   
   return(pupage);
 }
-calculateDogAge(3,45);
+calculateDogAge(3,5);
 
 /*
 2. 🎖Write a function named calculateMoviesToWatch that:
@@ -25,11 +25,10 @@ calculateDogAge(3,45);
 const _constant=64;
 function calculateMoviesToWatch(age,_number) {
   // Your code goes here
+    const Maxage=80;
+    let _totalmovies=(Maxage-age)*_number*12*4;//*4 cause its per month calculation
+return (_totalmovies);
 
-  for(let i=age;_constantage>=age;age++){
-no_of_movies=_number*12;
-return (no_of_movies);
-  }
 }
 calculateMoviesToWatch(21,4)
 /*
@@ -40,7 +39,7 @@ calculateMoviesToWatch(21,4)
 
 function celsiusToFahrenheit(_celsius) {
   // Your code goes here
-  f_temp=(9/5*c)+32;
+  f_temp=(9/5*_celsius)+32;
   return(f_temp);
 }
 celsiusToFahrenheit(34);
@@ -74,7 +73,7 @@ for(let i=1;i<=n;i++)
 {
 let _return =_return *x;
 }
-return(_return);
+return(_return//x**n);
 }
 pow(2,4);
 // Test
@@ -161,23 +160,23 @@ min(0, -10);
 
 function typeCheck(_input) {
   // Your code goes here
-  if(typeof(_input)==="number"){
-return("number type");
-  }
-  else if (typeof(_input)==="string"){
-    return("number type");
-  }
-  else if (typeof(_input)==="boolean"){
-    return("boolean type");
-  }
-  else if (typeof(_input)==="null"){
-    return("boolean type");
-  }
-  else if (typeof(_input)==="undefined"){
-    return("boolean type");
-  }
-  else {
-    return("object type");
-  }
+  return(typeof(_input));
+// return("number type");
+  // }
+  // else if (typeof(_input)==="string"){
+  //   return("number type");
+  // }
+  // else if (typeof(_input)==="boolean"){
+  //   return("boolean type");
+  // }
+  // else if (typeof(_input)==="null"){
+  //   return("boolean type");
+  // }
+  // else if (typeof(_input)==="undefined"){
+  //   return("boolean type");
+  // }
+  // else {
+  //   return("object type");
+  // }
 }
 typeCheck("hey");
