@@ -11,9 +11,12 @@ minToSec(2) ➞ 120
 */
 
 // - Write a Function Decleration for above problem
-function minToSec() {
+function minToSec(_minutes) {
   // Your code
+  let _seconds=_minutes*60;
+  return _seconds;
 }
+minToSec(60);
 // - Execute the function with required parameter
 
 /* 2. 
@@ -26,9 +29,17 @@ isInRange(1, 10, 19); // false
 */
 
 // - Write a Function Decleration for above problem
-function isInRange() {
+function isInRange(lr,n,ur) {
   // Your code
+if(n>=lr && ur>=n){
+  return(true);
 }
+else {
+  return(false);
+}
+
+}
+isInRange(2,8,20);
 // - Execute the function with required parameter
 
 /* 2. calculateBMI
@@ -49,10 +60,23 @@ Obese: BMI is 30 or more
 
 */
 
-function calculateBMI() {
+function calculateBMI(weight,height) {
   // Your code
+let bmi=weight/(height*height);
+if (bmi<18.5){
+  return("Underweight");
 }
-
+else if (bmi >=18.5 && bmi<=24.9){
+return("Normal_weight");
+}
+else if (bmi >=25 && bmi<=29.9){
+  return("Overweight");
+}
+else {
+  return("obese");
+}
+}
+calculateBMI(58,5.5);
 /* 3. appropiateDrinks
 
 Create a function that take the age are return the appropiate drink based on these conditions:
@@ -64,9 +88,23 @@ Create a function that take the age are return the appropiate drink based on the
 
 */
 
-function appropiateDrinks() {
+function appropiateDrinks(age) {
   // Your code
+  if(age<14){
+    return("drink fruit juice");
+  }
+  else if (age>14 && age<18){
+  return("drink soda");
+  }
+  else if (age<21){
+    return("drink soda");
+    }
+   else {
+    return("drink throat-piercing vodka");
+    }
+
 }
+appropiateDrinks(21);
 
 /* 4. Add two numers or string
 
@@ -79,9 +117,22 @@ Twist is when user passes anything other than number, or string value you should
 
 */
 
-function sum() {
+function sum(num1,num2) {
   // Your code
+  if(typeof(num1)==="string" && typeof(num2)==="string"){
+    let new_string=num1+num2;
+   return(new_string);
+  }
+  else if(typeof(num1)==="number" && typeof(num2)==="number"){
+    let new_num=num1+num2;
+    return(new_num);
+  }
+  else {
+    return("enter valid value");
+  }
+
 }
+let output=sum(3,4);
 
 // Function Test
 sum(2, 4); // 4
